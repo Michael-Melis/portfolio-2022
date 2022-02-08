@@ -7,7 +7,8 @@ import { Link } from "gatsby";
 
 const IndexPage = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [isMobile, setIsMobile] = useState(null);
+
+  const [isMobile, setIsMobile] = useState(500);
 
   const handleShowMenu = () => {
     setIsClicked(!isClicked);
