@@ -10,25 +10,27 @@ const IndexPage = () => {
 
   const [isMobile, setIsMobile] = useState(500);
 
+  const isBrowser = () => typeof window !== "undefined";
+
   const handleShowMenu = () => {
     setIsClicked(!isClicked);
   };
 
   const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
+    dynamicWidth: isBrowser() && window.innerWidth,
   });
 
   const setDimension = () => {
     getDimension({
-      dynamicWidth: window.innerWidth,
+      dynamicWidth: isBrowser() && window.innerWidth,
     });
   };
 
   useEffect(() => {
-    window.addEventListener("resize", setDimension);
+    isBrowser() && window.addEventListener("resize", setDimension);
     setIsMobile(screenSize.dynamicWidth < 1024 ? true : false);
     return () => {
-      window.removeEventListener("resize", setDimension);
+      isBrowser() && window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
 
