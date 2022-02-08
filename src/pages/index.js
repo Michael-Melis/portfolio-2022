@@ -7,7 +7,7 @@ import { Link } from "gatsby";
 
 const IndexPage = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [isMobile, setIsMobile] = useState(1000);
+  const [isMobile, setIsMobile] = useState(null);
 
   const handleShowMenu = () => {
     setIsClicked(!isClicked);
@@ -30,7 +30,7 @@ const IndexPage = () => {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
-  console.log(isMobile);
+
   const container = {
     hidden: { opacity: 0 },
     show: {
