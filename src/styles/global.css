@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: black;
+}
+.click-anywhere-btn-div {
+  @apply text-secondary flex flex-col items-center fixed left-1/2 -translate-x-1/2 bottom-24  animate-pulse;
+}
+.landing-div {
+  @apply w-screen overflow-hidden h-screen;
+}
+.cover-img {
+  @apply float-right  relative h-screen object-cover bottom-0  -mr-48 opacity-50 z-0;
+}
+.menu-h1 {
+  @apply my-4;
+}
+.menu-h2 {
+  @apply my-4 w-screen text-2xl;
+}
+.container-text {
+  @apply flex flex-col text-white font-mono relative  text-6xl z-10 left-10 top-64 font-extrabold;
+}
