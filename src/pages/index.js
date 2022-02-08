@@ -7,11 +7,30 @@ import { Link } from "gatsby";
 
 const IndexPage = () => {
   const [isClicked, setIsClicked] = useState(false);
+  const [isMobile, setIsMobile] = useState(null);
+
   const handleShowMenu = () => {
     setIsClicked(!isClicked);
   };
-  useEffect(() => {}, [isClicked]);
 
+  const [screenSize, getDimension] = useState({
+    dynamicWidth: window.innerWidth,
+  });
+
+  const setDimension = () => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", setDimension);
+    setIsMobile(screenSize.dynamicWidth < 1024 ? true : false);
+    return () => {
+      window.removeEventListener("resize", setDimension);
+    };
+  }, [screenSize]);
+  console.log(isMobile);
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -51,63 +70,123 @@ const IndexPage = () => {
         alt="Michael's profile picture"
         className="cover-img"
       />
-
-      <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="container-text "
-      >
-        {!isClicked ? (
-          ""
-        ) : (
-          <FontAwesomeIcon icon={faArrowDown} className="animate-bounce" />
-        )}
-        {!isClicked ? (
-          <motion.h1 variants={item} className="menu-h1  ">
-            HELLO.
-          </motion.h1>
-        ) : (
+      {isMobile ? (
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="container-text "
+        >
+          {!isClicked ? (
+            ""
+          ) : (
+            <FontAwesomeIcon
+              icon={faArrowDown}
+              className="animate-bounce mx-10  "
+            />
+          )}
+          {!isClicked ? (
+            <motion.h1 variants={item} className="menu-h1  ">
+              HELLO.
+            </motion.h1>
+          ) : (
+            <Link to="/about">
+              <motion.h1 variants={menu} className="menu-h1">
+                ABOUT
+              </motion.h1>
+            </Link>
+          )}
+          {!isClicked ? (
+            <motion.h1 variants={item} className="menu-h1 text-secondary">
+              I am
+            </motion.h1>
+          ) : (
+            <Link to="/resume">
+              <motion.h1 variants={menu} className="menu-h1 text-secondary">
+                RESUME
+              </motion.h1>
+            </Link>
+          )}
+          {!isClicked ? (
+            <motion.h1 variants={item} className="menu-h1  ">
+              Michael
+            </motion.h1>
+          ) : (
+            <Link to="/work" variants={menu} className="menu-h1 text-secondary">
+              <motion.h1 variants={menu} className="menu-h1 text-secondary">
+                WORK
+              </motion.h1>
+            </Link>
+          )}
+          {!isClicked ? (
+            <motion.h2 variants={item} className="menu-h2">
+              Front-End developer
+            </motion.h2>
+          ) : (
+            <Link to="/blog">
+              <motion.h1 variants={menu} className="menu-h2">
+                Blog
+              </motion.h1>
+            </Link>
+          )}
+        </motion.div>
+      ) : (
+        <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          className="container-text "
+        >
           <Link to="/about">
-            <motion.h1 variants={menu} className="menu-h1">
-              ABOUT
+            <motion.h1
+              variants={menu}
+              className="menu-h1 menu "
+              data-hover="About"
+              data-active="Clicked"
+            >
+              <span> Hello.</span>
             </motion.h1>
           </Link>
-        )}
-        {!isClicked ? (
-          <motion.h1 variants={item} className="menu-h1 text-secondary">
-            I am
-          </motion.h1>
-        ) : (
+
           <Link to="/resume">
-            <motion.h1 variants={menu} className="menu-h1 text-secondary">
-              RESUME
+            <motion.h1
+              variants={menu}
+              className="menu-h1 menu text-secondary"
+              data-hover="Resume"
+              data-active="Clicked"
+            >
+              <span> I am</span>
             </motion.h1>
           </Link>
-        )}
-        {!isClicked ? (
-          <motion.h1 variants={item} className="menu-h1  ">
-            Michael
-          </motion.h1>
-        ) : (
-          <Link to="/work" variants={menu} className="menu-h1 text-secondary">
-            <motion.h1 variants={menu} className="menu-h1 text-secondary">
-              WORK
+
+          <Link
+            to="/work"
+            variants={menu}
+            className="menu-h1 menu text-secondary"
+          >
+            <motion.h1
+              variants={menu}
+              className="menu-h1 menu text-secondary"
+              data-hover="Work"
+              data-active="Clicked"
+            >
+              <span> Michael</span>
             </motion.h1>
           </Link>
-        )}
-        {!isClicked ? (
-          <motion.h2 variants={item} className="menu-h2">
-            Front-End developer
-          </motion.h2>
-        ) : (
+
           <Link to="/blog">
-            <motion.h1 variants={menu} className="menu-h2">
-              Blog
+            <motion.h1
+              variants={menu}
+              className="menu-h2 menu"
+              data-hover="Blog"
+              data-active="Clicked"
+            >
+              <span> Front-End developer</span>
             </motion.h1>
           </Link>
-        )}
-      </motion.div>
+        </motion.div>
+      )}
+
       <motion.div className="click-anywhere-btn-div">
         <FontAwesomeIcon icon={faFingerprint} size="2x" />
         <h2>Click anywhere</h2>
