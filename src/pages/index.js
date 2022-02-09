@@ -132,6 +132,14 @@ const IndexPage = () => {
               </motion.h1>
             </Link>
           )}
+          {isClicked ? (
+            ""
+          ) : (
+            <motion.div className="click-anywhere-btn-div text-sm">
+              <FontAwesomeIcon icon={faFingerprint} size="2x" />
+              <h2>Tap anywhere</h2>
+            </motion.div>
+          )}
         </motion.div>
       ) : (
         <motion.div
@@ -189,11 +197,6 @@ const IndexPage = () => {
           </Link>
         </motion.div>
       )}
-
-      <motion.div className="click-anywhere-btn-div">
-        <FontAwesomeIcon icon={faFingerprint} size="2x" />
-        <h2>Tap anywhere</h2>
-      </motion.div>
     </div>
   );
 };
