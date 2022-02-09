@@ -170,7 +170,7 @@ const Resume = () => {
 
       <motion.div variants={item} className="resume-gihub-container ">
         <h1 className="resume-h1  ">MY CODE</h1>
-        <div className="animate-bounce">
+        <div>
           <FontAwesomeIcon
             icon={faGithub}
             size="2x"

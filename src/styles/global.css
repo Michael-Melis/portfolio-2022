@@ -34,7 +34,7 @@ body {
   @apply my-8;
 }
 .resume-h1 {
-  @apply my-4 text-2xl font-extrabold  underline animate-pulse md:text-4xl lg:animate-none lg:my-8;
+  @apply my-4 text-2xl font-extrabold  underline  md:text-4xl  lg:my-8;
 }
 .resume-h2 {
   @apply my-4 text-xl text-secondary font-extrabold md:text-2xl;
