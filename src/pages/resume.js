@@ -3,8 +3,9 @@ import Return from "../components/Return";
 
 const Resume = () => {
   return (
-    <div>
+    <div className="text-white">
       <Return />
+      Coming soon...
     </div>
   );
 };
