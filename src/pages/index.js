@@ -8,7 +8,7 @@ import { Link } from "gatsby";
 const IndexPage = () => {
   const [isClicked, setIsClicked] = useState(false);
 
-  const [isMobile, setIsMobile] = useState(500);
+  const [isMobile, setIsMobile] = useState(null);
 
   const isBrowser = () => typeof window !== "undefined";
 
@@ -184,7 +184,7 @@ const IndexPage = () => {
               data-hover="Blog"
               data-active="Clicked"
             >
-              <span> Front-End developer</span>
+              <span> Frontend developer</span>
             </motion.h1>
           </Link>
         </motion.div>
@@ -192,7 +192,7 @@ const IndexPage = () => {
 
       <motion.div className="click-anywhere-btn-div">
         <FontAwesomeIcon icon={faFingerprint} size="2x" />
-        <h2>Click anywhere</h2>
+        <h2>Tap anywhere</h2>
       </motion.div>
     </div>
   );
