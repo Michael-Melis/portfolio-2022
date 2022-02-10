@@ -58,7 +58,9 @@ const Resume = () => {
             </h3>
           </motion.div>
           <motion.div variants={item}>
-            <motion.h1 className=" resume-h1 ">FRONTEND SKILLS</motion.h1>
+            <motion.h1 className=" resume-h1 text-center ">
+              FRONTEND SKILLS
+            </motion.h1>
             <motion.div className="text-center">
               <h3 className="resume-h3 ">JAVASCRIPT</h3>
               <SkillLevel variants={item} skill={75} />
