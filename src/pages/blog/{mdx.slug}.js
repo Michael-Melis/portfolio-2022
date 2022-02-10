@@ -10,7 +10,7 @@ const BlogPost = ({ data }) => {
       <title>{data.mdx.frontmatter.title}</title>
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <GatsbyImage
-        className="mb-8"
+        className="lg:w-1/2 lg:rounded-2xl"
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
       />
