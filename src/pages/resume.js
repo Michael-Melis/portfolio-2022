@@ -45,7 +45,7 @@ const Resume = () => {
 
             <h3 className="resume-h3">ENGLISH</h3>
           </motion.div>
-          <motion.div variants={item} className="resume-section">
+          <motion.div variants={item} className="resume-section ">
             <h1 className="resume-h1">WORK EXPERIENCE</h1>
             <h2 className="resume-h2">AMAZON ASSOCIATE</h2>
             <h3 className="resume-h3">AUG 2020-AUG 2021</h3>
@@ -57,49 +57,48 @@ const Resume = () => {
               <br /> MANCHESTER, UK
             </h3>
           </motion.div>
-
-          <motion.h1 variants={item} className=" resume-h1">
-            FRONTEND SKILLS
-          </motion.h1>
           <motion.div variants={item}>
-            <h3 className="resume-h3">JAVASCRIPT</h3>
-            <SkillLevel variants={item} skill={75} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">HTML</h3>
-            <SkillLevel skill={90} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">REACT JS</h3>
-            <SkillLevel skill={80} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">VUE</h3>
-            <SkillLevel skill={50} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">GATSBY</h3>
-            <SkillLevel skill={80} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">NEXT JS</h3>
-            <SkillLevel skill={60} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">RECOIL JS</h3>
-            <SkillLevel skill={80} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">GIT/VERSION CONTROL</h3>
-            <SkillLevel skill={80} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">GITHUB</h3>
-            <SkillLevel skill={80} />
-          </motion.div>
-          <motion.div variants={item}>
-            <h3 className="resume-h3">JQUERY</h3>
-            <SkillLevel skill={50} />
+            <motion.h1 className=" resume-h1 ">FRONTEND SKILLS</motion.h1>
+            <motion.div className="text-center">
+              <h3 className="resume-h3 ">JAVASCRIPT</h3>
+              <SkillLevel variants={item} skill={75} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">HTML</h3>
+              <SkillLevel skill={90} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">REACT JS</h3>
+              <SkillLevel skill={80} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">VUE</h3>
+              <SkillLevel skill={50} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">GATSBY</h3>
+              <SkillLevel skill={80} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">NEXT JS</h3>
+              <SkillLevel skill={60} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">RECOIL JS</h3>
+              <SkillLevel skill={80} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">GIT/VERSION CONTROL</h3>
+              <SkillLevel skill={80} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">GITHUB</h3>
+              <SkillLevel skill={80} />
+            </motion.div>
+            <motion.div className="text-center">
+              <h3 className="resume-h3">JQUERY</h3>
+              <SkillLevel skill={50} />
+            </motion.div>
           </motion.div>
         </div>
         <div className="flex flex-col text-center ">
