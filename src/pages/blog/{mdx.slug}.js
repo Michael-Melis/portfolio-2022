@@ -3,10 +3,13 @@ import { graphql } from "gatsby";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+import Return from "./../../components/Return";
+
 const BlogPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.hero_image);
   return (
     <div className="resume-container font-mono text-white ">
+      <Return />
       <title>{data.mdx.frontmatter.title}</title>
       <p>Posted: {data.mdx.frontmatter.date}</p>
       <GatsbyImage

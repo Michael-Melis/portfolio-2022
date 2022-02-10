@@ -3,7 +3,6 @@ import michaelPic from "../images/michael.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFingerprint,
-  faArrowDown,
   faHandPointer,
 } from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";

@@ -1,7 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { StaticImage } from "gatsby-plugin-image";
 
 const WorkExample = ({ name, about, link, picArr }) => {
   return (
