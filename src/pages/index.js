@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import michaelPic from "../images/michael.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFingerprint, faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFingerprint,
+  faArrowDown,
+  faHandPointer,
+} from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 import { Link } from "gatsby";
 
 const IndexPage = () => {
   const [isClicked, setIsClicked] = useState(false);
-
+  const [isShow, setIsShown] = useState(false);
   const [isMobile, setIsMobile] = useState(null);
 
   const isBrowser = () => typeof window !== "undefined";
@@ -25,6 +29,14 @@ const IndexPage = () => {
       dynamicWidth: isBrowser() && window.innerWidth,
     });
   };
+
+  useEffect(() => {
+    setTimeout(() => {
+      console.log(isShow);
+      setIsShown(true);
+      console.log(isShow);
+    }, 10000);
+  }, []);
 
   useEffect(() => {
     isBrowser() && window.addEventListener("resize", setDimension);
@@ -81,14 +93,14 @@ const IndexPage = () => {
           animate="show"
           className="container-text "
         >
-          {!isClicked ? (
+          {/* {!isClicked ? (
             ""
           ) : (
             <FontAwesomeIcon
               icon={faArrowDown}
               className="animate-bounce mx-10  "
             />
-          )}
+          )} */}
           {!isClicked ? (
             <motion.h1 variants={item} className="menu-h1  ">
               HELLO.
@@ -112,7 +124,7 @@ const IndexPage = () => {
             </Link>
           )}
           {!isClicked ? (
-            <motion.h1 variants={item} className="menu-h1  ">
+            <motion.h1 variants={item} className="menu-h1 text-secondary  ">
               Michael
             </motion.h1>
           ) : (
@@ -196,6 +208,14 @@ const IndexPage = () => {
               <span> Frontend developer</span>
             </motion.h1>
           </Link>
+          {isShow ? (
+            <div className="lg:flex lg:flex-row hidden lg:text-xl lg:justify-center lg:items-center lg:relative lg:left-80 lg:-bottom-20 lg:animate-bounce">
+              <FontAwesomeIcon icon={faHandPointer} className="mr-8" />
+              <p>Try to hover the content</p>
+            </div>
+          ) : (
+            ""
+          )}
         </motion.div>
       )}
     </div>
