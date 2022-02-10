@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useRef } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { motion } from "framer-motion";
+import { StaticImage } from "gatsby-plugin-image";
 
 const WorkExample = ({ name, about, link, picArr }) => {
   return (
@@ -11,7 +11,7 @@ const WorkExample = ({ name, about, link, picArr }) => {
         <p className="work-example-p">{about}</p>
         <div className="work-example-github">
           <FontAwesomeIcon icon={faGithub} />
-          <a href={link} target="_blank">
+          <a href={link} target="_blank" rel="noreferrer">
             /{name}
           </a>
         </div>

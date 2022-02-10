@@ -179,6 +179,7 @@ const Resume = () => {
           <a
             href="https://github.com/Michael-Melis"
             target="_blank"
+            rel="noreferrer"
             className=" ml-4 lg:text-2xl lg:hover:text-secondary "
           >
             /Michael-Melis
