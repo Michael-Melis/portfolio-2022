@@ -34,7 +34,7 @@ body {
   @apply my-8;
 }
 .resume-h1 {
-  @apply my-4 text-2xl font-extrabold  underline  md:text-4xl  lg:my-8;
+  @apply my-4 text-2xl font-extrabold  underline  md:text-4xl  lg:text-6xl lg:my-8;
 }
 .resume-h2 {
   @apply my-4 text-xl text-secondary font-extrabold md:text-2xl;
@@ -44,6 +44,15 @@ body {
 }
 .resume-gihub-container {
   @apply flex flex-col items-center;
+}
+/***************
+****about*****
+***************/
+.about-span {
+  @apply text-secondary font-bold;
+}
+.about-h2 {
+  @apply text-xl md:text-2xl lg:text-4xl lg:my-16;
 }
 
 /***********************************
