@@ -27,6 +27,7 @@ const Resume = () => {
       animate="show"
       className="resume-container "
     >
+      <title>Resume</title>
       <Return />
       <div className=" lg:flex lg:justify-evenly lg:w-screen">
         <div>

@@ -5,6 +5,7 @@ const About = () => {
   return (
     <div className=" resume-container mx-4 md:mx-36 lg:mx-56 lg:items-start">
       <Return />
+      <title>About</title>
       <div className="resume-section">
         <h1 className="resume-h1 ">ABOUT</h1>
         <h2 className="about-h2">

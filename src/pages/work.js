@@ -39,6 +39,7 @@ const Work = () => {
       className=" resume-container mx-4 md:mx-36 lg:mx-80 lg:items-start"
     >
       <Return />
+      <title>Work</title>
 
       <motion.div variants={item} className="resume-section">
         <h1 className="resume-h1">WORK</h1>
