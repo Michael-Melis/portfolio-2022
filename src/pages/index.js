@@ -84,7 +84,7 @@ const IndexPage = () => {
         alt="Michael's profile picture"
         className="cover-img"
       />
-      <title>Michael-Melis</title>
+      <title>Michael Melis</title>
       {isMobile ? (
         <motion.div
           variants={container}
