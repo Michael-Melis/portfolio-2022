@@ -27,7 +27,7 @@ const About = () => {
         </h2>
         <h2 className="about-h2">
           I consider myself as a <span className="about-span">TEAM</span>{" "}
-          oriented and <span className="about-span">STRONG</span> individual with very steep learning curve, 
+          oriented and <span className="about-span">STRONG</span> individual with a very steep learning curve, 
           waiting for the{" "}
           <span className="about-span animate-pulse">
             CHANCE

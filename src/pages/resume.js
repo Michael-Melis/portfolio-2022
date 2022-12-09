@@ -1,7 +1,7 @@
 import React from 'react';
 import Return from '../components/Return';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faGithub, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { motion } from 'framer-motion';
 
 const Resume = () => {
@@ -163,6 +163,20 @@ const Resume = () => {
         <h1 className='resume-h1  '>MY CODE</h1>
         <div>
           <FontAwesomeIcon
+            icon={faGitlab}
+            size='2x'
+            className='text-secondary mr-4 lg:text-2xl '
+          />
+          <a
+            href='https://gitlab.com/Michael_Melis'
+            target='_blank'
+            rel='noreferrer'
+            className=' ml-4 lg:text-2xl lg:hover:text-secondary '>
+            /Michael-Melis
+          </a>
+        </div>
+        <div>
+          <FontAwesomeIcon
             icon={faGithub}
             size='2x'
             className='text-secondary mr-4 lg:text-2xl '
@@ -173,8 +187,8 @@ const Resume = () => {
             rel='noreferrer'
             className=' ml-4 lg:text-2xl lg:hover:text-secondary '>
             /Michael-Melis
-          </a>
-        </div>
+          </a>{' '}
+        </div>{' '}
       </motion.div>
     </motion.div>
   );
