@@ -118,6 +118,12 @@ const Resume = () => {
               <h3 className='resume-h3'>...</h3>
             </motion.div>
             <motion.div>
+              <h3 className='text-xl'>Linting:</h3>
+              <h3 className='resume-h3'>ESLINT - AIRBNB RULES</h3>
+              <h3 className='resume-h3'>PRETTIER</h3>
+              <h3 className='resume-h3'>HUSKY / PRECOMMIT</h3>
+            </motion.div>
+            <motion.div>
               <h3 className='text-xl'>Version control:</h3>
               <h3 className='resume-h3'>GIT</h3>
               <h3 className='resume-h3'>GITHUB</h3>
