@@ -138,22 +138,15 @@ const Resume = () => {
               <h3 className='resume-h3'>
                 TAILWIND CSS / CSS3 / SASS / CSS MODULES
               </h3>
+              <h3 className='resume-h3'>STYLED COMPONENTS</h3>
             </motion.div>
             <motion.div>
-              <h3 className='resume-h3'>
-                <h3 className='text-xl'>Charts:</h3>
-                CHART JS / APEXCHARTS
-              </h3>
+              <h3 className='text-xl'>Charts:</h3>
+              <h3 className='resume-h3'>CHART JS / APEXCHARTS</h3>
             </motion.div>
             <motion.div>
               <h3 className='text-xl'>Animations:</h3>
               <h3 className='resume-h3'>FRAMER MOTION / ANIMATE</h3>
-            </motion.div>
-            <motion.div>
-              <h3 className='resume-h3'>STYLED COMPONENTS</h3>
-            </motion.div>
-            <motion.div>
-              <h3 className='resume-h3'>RESPONSIVE DESIGN</h3>
             </motion.div>
           </motion.div>{' '}
         </div>
