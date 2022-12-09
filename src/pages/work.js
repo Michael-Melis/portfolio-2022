@@ -41,11 +41,8 @@ const Work = () => {
       <title>Work</title>
 
       <motion.div variants={item} className='resume-section'>
-        <h1 className='resume-h1'>WORK</h1>
-        <h2 className='about-h2'>
-          I do not have a lot of experience at the moment but I still have my
-          work to show.
-        </h2>
+        <h1 className='resume-h1 ml-4'>WORK</h1>
+        
       </motion.div>
       <motion.div variants={item}>
         <WorkExample

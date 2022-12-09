@@ -22,17 +22,16 @@ const About = () => {
         </h2>
 
         <h2 className="about-h2">
-          I have one year experience in Frontend, firm knowledge of HTML,CSS and
-          JavaScript language.
+          I have two years experience in Frontend, firm knowledge of HTML,CSS and
+          JavaScript/Typescript language.
         </h2>
         <h2 className="about-h2">
           I consider myself as a <span className="about-span">TEAM</span>{" "}
-          oriented and <span className="about-span">STRONG</span> individual
+          oriented and <span className="about-span">STRONG</span> individual with very steep learning curve, 
           waiting for the{" "}
           <span className="about-span animate-pulse">
-            CHANCE TO PROVE MYSELF
-          </span>
-          .
+            CHANCE
+          </span> to prove myself.
         </h2>
       </div>
 
