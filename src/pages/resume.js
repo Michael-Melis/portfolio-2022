@@ -50,6 +50,7 @@ const Resume = () => {
 
             <h2 className='text-xl'>March 2022 - Present</h2>
             <h2 className='text-xl'>AgeVolt Slovakia s.r.o.</h2>
+            <h2 className='text-xl'>Bratislava, SK</h2>
 
             <h2 className='resume-h2'>AMAZON ASSOCIATE</h2>
             <h3 className='text-xl'>AUG 2020-AUG 2021</h3>
